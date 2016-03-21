@@ -1,0 +1,8 @@
+<%= walletone_form(ptenabled: payment_method.ptenabled,
+                   amount: @order.total,
+                   currency_id: 643,
+                   payment_no: @order.number,
+                   success_url: walletone_confirm_url(@order),
+                   fail_url: walletone_confirm_url(@order),
+                   description:"#{ENV['WALLETONE_DESCRIPTION']} [[pm:#{payment_method.id}]]"
+                   ) %>

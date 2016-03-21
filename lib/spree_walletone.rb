@@ -1,0 +1,5 @@
+require 'walletone'
+require 'spree_core'
+require 'spree_walletone/version'
+require 'spree_walletone/engine'
+require 'sass/rails'
