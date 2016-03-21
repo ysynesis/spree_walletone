@@ -9,7 +9,8 @@ module Spree
           WMI_PAYMENT_NO: options[:payment_no],
           WMI_SUCCESS_URL: options[:success_url],
           WMI_FAIL_URL: options[:fail_url],
-          WMI_DESCRIPTION: options[:description]
+          WMI_DESCRIPTION: options[:description],
+          PAYMENT_METHOD_ID: options[:payment_method_id]
         )
         payment.sign! ENV['WALLETONE_SECRET']
         payment
