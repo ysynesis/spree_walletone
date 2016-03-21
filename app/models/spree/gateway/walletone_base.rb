@@ -7,6 +7,14 @@ module Spree
       true
     end
 
+    def provider_class
+      Spree::WalletonePaymentProcessing
+    end
+
+    def provider
+      Spree::WalletoneCheckout.new()
+    end
+
     def ptenabled
       preferences[:ptenabled] ? preferences[:ptenabled].split(",").map(&:strip) : []
     end
